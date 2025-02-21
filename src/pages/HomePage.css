@@ -1,4 +1,4 @@
-.container{
+.container {
   flex: 1;
   max-width: 1400px;
   display: flex;
@@ -7,50 +7,40 @@
   min-height: calc(100vh - 180px);
 }
 
-
-
 /* Título principal */
 .title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    color: #333;
-  }
-  
-  /* Grilla de usuarios */
-  .user-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px ;
-    height: auto;
-  }
-  
-  /* Texto de carga */
-  .loading-text {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    color: #555;
-  }
-  
-  /* Texto de error */
-  .error-text {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    color: red;
-  }
-
-.pagination-container {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
+/* Grilla de usuarios */
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  height: auto;
+  margin-top: 30px;
+}
 
+/* Texto de carga */
+.loading-text {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Texto de error */
+.error-text {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: red;
+}
 
 .no-results {
   text-align: center;
@@ -59,9 +49,22 @@
   margin: 2rem 0;
 }
 
+.cont-pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
 /* Estilos para mejorar la apariencia en dispositivos móviles */
 @media (max-width: 600px) {
   .pagination-container {
     margin: 1rem 0;
+  }
+
+  .user-grid{
+    margin-top: 15px;
+    gap: 20px;
   }
 }

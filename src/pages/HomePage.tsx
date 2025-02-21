@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { useUserStore } from "../stores/userStore";
 import { useFetchUsers } from "../hooks/useFetchUsers";
 import { Card, Modal, SearchBar } from "../components";
-import { Pagination, } from '@mui/material';
-import './HomePage.css';
+import { Pagination } from "@mui/material";
+import "./HomePage.css";
 
 export const HomePage: React.FC = () => {
-
-  const { users, loading, error, selectedUser, setSelectedUser } = useUserStore();
+  const { users, loading, error, selectedUser, setSelectedUser } =
+    useUserStore();
   const [page, setPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState('');
-  
-  const itemsPerPage = 8; 
-  
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const itemsPerPage = 8;
+
   // Trae usuarios de la Api
   useFetchUsers();
 
@@ -20,9 +20,8 @@ export const HomePage: React.FC = () => {
   if (loading) return <p className="loading-text">Cargando usuarios...</p>;
   if (error) return <p className="error-text">{error}</p>;
 
-  
   // Filtrar usuarios por nombre
-  const filteredUsers = users.filter(user =>
+  const filteredUsers = users.filter((user) =>
     user.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -35,23 +34,28 @@ export const HomePage: React.FC = () => {
   const currentUsers = filteredUsers.slice(startIndex, endIndex);
 
   // Manejar el cambio de página
-  const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => {
+  const handlePageChange = (
+    _event: React.ChangeEvent<unknown>,
+    value: number
+  ) => {
     setPage(value);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Manejar la búsqueda
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
-    setPage(1); 
+    setPage(1);
   };
 
   return (
     <div className="container">
-      <h1 className="title">Lista de Usuarios</h1>
-      
-      {/* Barra de búsqueda */}
-      <SearchBar value={searchQuery} onChange={handleSearch} />
+      <section>
+        <h1 className="title">Lista de Usuarios</h1>
+
+        {/* Barra de búsqueda */}
+        <SearchBar value={searchQuery} onChange={handleSearch} />
+      </section>
 
       <div className="user-grid">
         {currentUsers.map((user) => (
@@ -71,12 +75,13 @@ export const HomePage: React.FC = () => {
       {/* Paginación */}
       {filteredUsers.length > 0 && (
         <Pagination
-        count={totalPages}
-        page={page}
-        onChange={handlePageChange}
-        variant="outlined"
-        shape="rounded"
-      />
+        className="cont-pagination"
+          count={totalPages}
+          page={page}
+          onChange={handlePageChange}
+          variant="outlined"
+          shape="rounded"
+        />
       )}
 
       {selectedUser && (
