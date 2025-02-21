@@ -75,7 +75,8 @@ export const HomePage: React.FC = () => {
       {/* Paginación */}
       {filteredUsers.length > 0 && (
         <Pagination
-        className="cont-pagination"
+          className="cont-pagination"
+          color="primary"
           count={totalPages}
           page={page}
           onChange={handlePageChange}
