@@ -49,9 +49,28 @@
   padding: 1rem;
 }
 
+.search-container {
+  margin: 1rem auto 2rem auto;
+  max-width: 580px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin: 2rem 0;
+}
+
 /* Estilos para mejorar la apariencia en dispositivos móviles */
 @media (max-width: 600px) {
   .pagination-container {
     margin: 1rem 0;
+  }
+
+  .search-container{
+    max-width: 90%;
+    width: 100%;
   }
 }
