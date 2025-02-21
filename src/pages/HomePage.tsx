@@ -14,7 +14,7 @@ export const HomePage = () => {
   if (error) return <p className="error-text">{error}</p>;
 
   return (
-    <div>
+    <div className="container">
       <h1 className="title">Lista de Usuarios</h1>
       <div className="user-grid">
         {users.map((user) => (
