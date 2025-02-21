@@ -24,6 +24,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px ;
+    height: auto;
   }
   
   /* Texto de carga */
@@ -49,12 +50,7 @@
   padding: 1rem;
 }
 
-.search-container {
-  margin: 1rem auto 2rem auto;
-  max-width: 580px;
-  width: 100%;
-  padding: 0 1rem;
-}
+
 
 .no-results {
   text-align: center;
@@ -67,10 +63,5 @@
 @media (max-width: 600px) {
   .pagination-container {
     margin: 1rem 0;
-  }
-
-  .search-container{
-    max-width: 90%;
-    width: 100%;
   }
 }
