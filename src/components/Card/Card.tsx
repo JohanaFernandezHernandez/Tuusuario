@@ -6,7 +6,7 @@ interface Props {
   onClick: () => void;
 }
 
-const UserCard = ({ user, onClick }: Props) => (
+export const Card = ({ user, onClick }: Props) => (
   <div className="user-card" onClick={onClick}>
     <h2>{user.name}</h2>
     <p>{user.email}</p>
@@ -14,4 +14,3 @@ const UserCard = ({ user, onClick }: Props) => (
   </div>
 );
 
-export default UserCard;

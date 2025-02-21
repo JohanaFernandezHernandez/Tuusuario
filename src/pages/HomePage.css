@@ -1,0 +1,31 @@
+/* Título principal */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Grilla de usuarios */
+  .user-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Texto de carga */
+  .loading-text {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Texto de error */
+  .error-text {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: red;
+  }

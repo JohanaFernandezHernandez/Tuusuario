@@ -5,7 +5,7 @@ interface Props {
   onClose: () => void;
 }
 
-const UserModal = ({ user, onClose }: Props) => (
+export const Modal = ({ user, onClose }: Props) => (
   <div className="modal-overlay">
     <div className="modal-content">
       <button onClick={onClose} className="modal-close-btn">X</button>
@@ -13,10 +13,10 @@ const UserModal = ({ user, onClose }: Props) => (
       <p><strong>Email:</strong> {user.email}</p>
       <p><strong>Teléfono:</strong> {user.phone}</p>
       <p><strong>Ciudad:</strong> {user.address.city}</p>
+      <p><strong>Dirección:</strong> {user.address.street} - {user.address.suite}</p>
       <p><strong>Website:</strong> {user.website}</p>
       <p><strong>Compañía:</strong> {user.company.name}</p>
     </div>
   </div>
 );
 
-export default UserModal;
