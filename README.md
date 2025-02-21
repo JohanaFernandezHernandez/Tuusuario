@@ -1,30 +1,67 @@
-# React + TypeScript + Vite
+# Imagen Favorita 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción 
 
-Currently, two official plugins are available:
+Esta aplicación web permite a los usuarios gestionar y almacenar sus imágenes más especiales. Ofrece funcionalidades completas de CRUD (Crear, Leer, Actualizar y Eliminar) para las imágenes, con una interfaz adaptativa que funciona perfectamente en dispositivos móviles y de escritorio.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo del Proyecto 🎥
 
-## Expanding the ESLint configuration
+Para ver la aplicación en acción y entender mejor su funcionamiento, mira el [Video Explicativo](https://www.loom.com/share/535e82e836d04ecf9aaa982ba3b31897?sid=00ce248f-4077-4a6b-bd33-884894904dfe)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Arquitectura y Tecnologías 
 
-- Configure the top-level `parserOptions` property like this:
+El proyecto está construido con una arquitectura cliente-servidor:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Frontend
+- **React + Vite**: Framework moderno para UI con desarrollo rápido y eficiente
+- **Material UI**: Componentes prediseñados para una interfaz responsive y accesible
+- **Axios**: Cliente HTTP para comunicación con el backend
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Backend
+- **Node.js + Express**: Servidor REST con manejo eficiente de operaciones asíncronas
+- **PostgreSQL**: Base de datos relacional para almacenamiento de imágenes y metadatos
+- **Multer**: Middleware para gestión de subida de archivos
+
+La aplicación implementa operaciones CRUD completas, con énfasis en la reutilización de componentes y la seguridad mediante variables de entorno.
+
+## Instalación 
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/JohanaFernandezHernandez/Tuusuario.git
+   ```
+
+2. Instala las dependencias :
+   ```bash
+   cd Tuusuario && npm install
+
+   ```
+
+3. Configura las variables de entorno:
+
+   Frontend (.env):
+   ```env
+   VITE_API= https://jsonplaceholder.typicode.com/users
+   ```
+
+
+4. Inicia la aplicación:
+
+   ```bash
+     npm run dev
+   ```
+
+## Tecnologías Utilizadas 
+
+- **Frontend**:
+  - [React.js](https://react.dev/) - Biblioteca UI
+  - [Vite](https://vitejs.dev/) - Build tool y dev server
+  - [Material UI](https://mui.com/) - Componentes de UI
+  - [Axios](https://axios-http.com/) - Cliente HTTP
+  - [zustand](https://zustand-demo.pmnd.rs/) - Estado Global
+  - [TypeScript](https://www.typescriptlang.org/) - Typado
+
+## Autora 
+
+**Johana Fernández Hernández**
+- Desarrolladora FrontEnd
