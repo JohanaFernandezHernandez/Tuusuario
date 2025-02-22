@@ -7,7 +7,7 @@
   min-height: calc(100vh - 180px);
 }
 
-/* Título principal */
+
 .title {
   text-align: center;
   font-size: 2rem;
@@ -16,7 +16,7 @@
   color: #333;
 }
 
-/* Grilla de usuarios */
+
 .user-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -27,7 +27,7 @@
   justify-content: center;
 }
 
-/* Texto de carga */
+
 .loading-text {
   text-align: center;
   margin-top: 2rem;
@@ -35,7 +35,7 @@
   color: #555;
 }
 
-/* Texto de error */
+
 .error-text {
   text-align: center;
   margin-top: 2rem;
@@ -58,7 +58,6 @@
   margin-top: auto;
 }
 
-/* Estilos para mejorar la apariencia en dispositivos móviles */
 @media (max-width: 600px) {
   .pagination-container {
     margin: 1rem 0;

@@ -8,7 +8,7 @@
   z-index: 1000;
 }
 
-/* Contenido del modal */
+
 .modal-content {
   background-color: #ffffff;
   padding: 1.5rem;
@@ -46,17 +46,15 @@
   z-index: -1;
   padding: 8px;
   border-radius: 10px;
-  opacity: 0; /* Inicialmente oculto */
-  /* Se combinan dos animaciones: el giro y la aparición del borde */
+  opacity: 0; 
   animation: spin 3s linear infinite , fadeBorder 0.3s ease forwards 0.3s;
 }
 
-/* Para aplicar el desenfoque solo en uno de ellos */
 .modal-content::before {
   filter: blur(1.5rem);
 }
 
-/* Animación del borde giratorio */
+
 @keyframes spin {
   from {
     --angle: 0deg;
@@ -66,7 +64,7 @@
   }
 }
 
-/* Animación de aparición del borde */
+
 @keyframes fadeBorder {
   from {
     opacity: 0;
@@ -76,7 +74,7 @@
   }
 }
 
-/* Botón de cierre */
+
 .modal-close-btn {
   position: absolute;
   top: 0.5rem;
@@ -93,19 +91,17 @@
   color: #000;
 }
 
-/* Encabezado */
+
 .modal-content h2 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-/* Párrafos */
 .modal-content p {
   margin: 0.5rem 0;
 }
 
-/* Animación de entrada */
 @keyframes fadeIn {
   from {
     opacity: 0;
