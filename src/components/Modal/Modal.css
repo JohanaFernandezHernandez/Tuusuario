@@ -18,7 +18,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
   animation: fadeIn 0.3s ease-out;
   color: #000000;
-  position: relative;
 }
 
 /* Borde */
@@ -30,7 +29,6 @@
 
 .modal-content::after,
 .modal-content::before {
-  /* --angle: 0deg; */
   content: "";
   position: absolute;
   top: 50%;
@@ -40,30 +38,41 @@
   background-image: conic-gradient(
     from var(--angle),
     transparent 70%,
-    #00ff99,
-    #007bff
+    #00C853,
+    #007bff,
+    #00C853
   );
   transform: translate(-50%, -50%);
   z-index: -1;
   padding: 8px;
   border-radius: 10px;
-  animation: 5s spin linear infinite;
-  opacity: 0.5; /* Inicialmente oculto */
-  /* animation-fill-mode: forwards; */
+  opacity: 0; /* Inicialmente oculto */
+  /* Se combinan dos animaciones: el giro y la aparición del borde */
+  animation: spin 3s linear infinite , fadeBorder 0.3s ease forwards 0.3s;
 }
 
+/* Para aplicar el desenfoque solo en uno de ellos */
 .modal-content::before {
   filter: blur(1.5rem);
-  opacity: 0.5;
 }
 
-/* Animación borde */
+/* Animación del borde giratorio */
 @keyframes spin {
   from {
     --angle: 0deg;
   }
   to {
     --angle: 360deg;
+  }
+}
+
+/* Animación de aparición del borde */
+@keyframes fadeBorder {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
   }
 }
 
@@ -91,7 +100,7 @@
   margin-bottom: 1rem;
 }
 
-/* Parrafos */
+/* Párrafos */
 .modal-content p {
   margin: 0.5rem 0;
 }
