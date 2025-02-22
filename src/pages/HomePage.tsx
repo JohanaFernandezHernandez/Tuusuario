@@ -6,8 +6,7 @@ import { Pagination } from "@mui/material";
 import "./HomePage.css";
 
 export const HomePage: React.FC = () => {
-  const { users, loading, error, selectedUser, setSelectedUser } =
-    useUserStore();
+  const { users, loading, error, selectedUser, setSelectedUser } = useUserStore();
   const [page, setPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
 
