@@ -47,7 +47,7 @@
   z-index: -1;
   padding: 8px;
   border-radius: 10px;
-  animation: 3s spin linear infinite;
+  animation: 5s spin linear infinite;
   opacity: 0.5; /* Inicialmente oculto */
   /* animation-fill-mode: forwards; */
 }
@@ -108,9 +108,8 @@
   }
 }
 
-
 @media (max-width: 600px) {
-  .modal-content{
+  .modal-content {
     width: 71%;
   }
 }
