@@ -7,11 +7,11 @@ import "./App.css";
 const App = () => {
 
   return (
-    <div >
+    <>
       <Header/>
       <HomePage/>
       <Footer/>
-    </div>
+    </>
   );
 };
 

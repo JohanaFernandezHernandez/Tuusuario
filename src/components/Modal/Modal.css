@@ -27,6 +27,7 @@
   inherits: false;
 }
 
+/* Animación borde */
 .modal-content::after,
 .modal-content::before {
   content: "";
@@ -98,6 +99,8 @@
   margin-bottom: 1rem;
 }
 
+
+/* Animación abrir modal */
 .modal-content p {
   margin: 0.5rem 0;
 }
