@@ -6,7 +6,7 @@ Página web que consume una API de usuarios. En ella se muestran los usuarios en
 
 ## Demo del Proyecto 🎥
 
-Para ver la aplicación en acción y entender mejor su funcionamiento, 
+Para ver la aplicación en acción y entender mejor su funcionamiento, - [video](https://www.loom.com/share/84ba6e4c0cdd4a7d9dd798934133f453?sid=b87ba14a-0e4e-43bd-a095-7e43cbf803fe) 
 
 
 ## Instalación 🔧
